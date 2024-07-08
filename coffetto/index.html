@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Link -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Title -->
+    <title>Coffetto</title>
+  </head>
+  <body>
+    <!-- Go to Top button -->
+    <button
+      id="goToTopBtn"
+      class="fixed bottom-10 right-8 bg-gradient-to-t from-[#6B4238] to-[#36211C] text-white px-2 py-2 rounded-full z-[999] hidden md:block"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13 7.828V20H11V7.828L5.63598 13.192L4.22198 11.778L12 4L19.778 11.778L18.364 13.192L13 7.828Z"
+          fill="white"
+        />
+      </svg>
+    </button>
+
+    <!-- Header Start -->
+    <section id="home" class="bg-header-gradient">
+      <!-- navbar -->
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        class="border-b-2 border-dashed border-coffee-200"
+      >
+        <nav
+          class="container flex lg:justify-between justify-center py-18 lg:py-0 items-center"
+        >
+          <a href="#home"> <img src="/assets/Header-logo.svg" alt="" /></a>
+          <ul
+            class="flex justify-center items-center lg:gap-72 gap-12 lg:static fixed bottom-0 bg-header-gradient lg:bg-none lg:w-auto w-full z-[999] rounded-t-[56px]"
+          >
+            <li
+              class="py-5 lg:py-0 flex flex-col justify-center items-center gap-1"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="lg:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V9.49C2.99989 9.33761 3.03462 9.18721 3.10152 9.0503C3.16841 8.91338 3.26572 8.79356 3.386 8.7L11.386 2.478C11.5615 2.34144 11.7776 2.2673 12 2.2673C12.2224 2.2673 12.4385 2.34144 12.614 2.478L20.614 8.7C20.7343 8.79356 20.8316 8.91338 20.8985 9.0503C20.9654 9.18721 21.0001 9.33761 21 9.49V20ZM11 13V19H13V13H11Z"
+                  fill="url(#paint0_linear_168_46)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_168_46"
+                    x1="12"
+                    y1="2.2673"
+                    x2="12"
+                    y2="21"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E7CB98" />
+                    <stop offset="1" stop-color="#B9882C" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <a
+                href="#home"
+                class="nav-link font-pacifico font-normal lg:text-base text-10 leading-3 lg:leading-5 text-white hover:text-coffee-100 duration-300 lg:py-8 inline-block"
+                >Home</a
+              >
+            </li>
+            <li
+              class="py-5 lg:py-0 flex flex-col justify-center items-center gap-1"
+            >
+              <svg
+                width="24"
+                height="24"
+                class="lg:hidden"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 15.245V22.117C17 22.2055 16.9766 22.2924 16.932 22.3688C16.8875 22.4452 16.8235 22.5085 16.7465 22.5521C16.6696 22.5957 16.5824 22.6181 16.4939 22.6171C16.4055 22.616 16.3189 22.5915 16.243 22.546L12 20L7.757 22.546C7.68104 22.5915 7.59436 22.616 7.50581 22.6171C7.41727 22.6181 7.33004 22.5956 7.25304 22.5519C7.17605 22.5081 7.11205 22.4447 7.06759 22.3682C7.02313 22.2916 6.9998 22.2046 7 22.116V15.246C5.70615 14.2101 4.76599 12.7979 4.30946 11.2045C3.85293 9.6112 3.90256 7.91539 4.45149 6.35148C5.00043 4.78756 6.02156 3.43275 7.37378 2.47428C8.726 1.51581 10.3425 1.00101 12 1.00101C13.6575 1.00101 15.274 1.51581 16.6262 2.47428C17.9784 3.43275 18.9996 4.78756 19.5485 6.35148C20.0974 7.91539 20.1471 9.6112 19.6905 11.2045C19.234 12.7979 18.2939 14.2101 17 15.246V15.245ZM12 15C13.5913 15 15.1174 14.3679 16.2426 13.2426C17.3679 12.1174 18 10.5913 18 9.00001C18 7.40871 17.3679 5.88258 16.2426 4.75736C15.1174 3.63215 13.5913 3.00001 12 3.00001C10.4087 3.00001 8.88258 3.63215 7.75736 4.75736C6.63214 5.88258 6 7.40871 6 9.00001C6 10.5913 6.63214 12.1174 7.75736 13.2426C8.88258 14.3679 10.4087 15 12 15ZM12 13C10.9391 13 9.92172 12.5786 9.17157 11.8284C8.42143 11.0783 8 10.0609 8 9.00001C8 7.93914 8.42143 6.92172 9.17157 6.17158C9.92172 5.42143 10.9391 5.00001 12 5.00001C13.0609 5.00001 14.0783 5.42143 14.8284 6.17158C15.5786 6.92172 16 7.93914 16 9.00001C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13Z"
+                  fill="url(#paint0_linear_168_48)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_168_48"
+                    x1="12"
+                    y1="1.00101"
+                    x2="12"
+                    y2="22.6171"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E7CB98" />
+                    <stop offset="1" stop-color="#B9882C" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <a
+                href="#about"
+                class="nav-link font-pacifico font-normal lg:text-base text-10 leading-3 lg:leading-5 text-white hover:text-coffee-100 duration-300 lg:py-8 inline-block"
+                >About</a
+              >
+            </li>
+            <li
+              class="py-5 lg:py-0 flex flex-col justify-center items-center gap-1"
+            >
+              <svg
+                width="24"
+                height="24"
+                class="lg:hidden"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM16.5 7.5L10 10L7.5 16.5L14 14L16.5 7.5ZM12 13C11.7348 13 11.4804 12.8946 11.2929 12.7071C11.1054 12.5196 11 12.2652 11 12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12C13 12.2652 12.8946 12.5196 12.7071 12.7071C12.5196 12.8946 12.2652 13 12 13Z"
+                  fill="url(#paint0_linear_168_50)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_168_50"
+                    x1="12"
+                    y1="2"
+                    x2="12"
+                    y2="22"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E7CB98" />
+                    <stop offset="1" stop-color="#B9882C" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <a
+                href="#steps"
+                class="nav-link font-pacifico font-normal lg:text-base text-10 leading-3 lg:leading-5 text-white hover:text-coffee-100 duration-300 lg:py-8 inline-block"
+                >Steps</a
+              >
+            </li>
+            <li
+              class="py-5 lg:py-0 flex flex-col justify-center items-center gap-1"
+            >
+              <svg
+                width="24"
+                height="24"
+                class="lg:hidden"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 8.99401C1.99947 8.20621 2.15435 7.42605 2.45577 6.69819C2.75718 5.97034 3.19921 5.30909 3.75655 4.75231C4.31388 4.19553 4.97558 3.75416 5.70373 3.45348C6.43189 3.15279 7.21221 2.99869 8 3.00001H16C19.313 3.00001 22 5.69501 22 8.99401V21H8C4.687 21 2 18.305 2 15.006V8.99401ZM14 11V13H16V11H14ZM8 11V13H10V11H8Z"
+                  fill="url(#paint0_linear_168_52)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_168_52"
+                    x1="12"
+                    y1="3"
+                    x2="12"
+                    y2="21"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E7CB98" />
+                    <stop offset="1" stop-color="#B9882C" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <a
+                href="#testimonial"
+                class="nav-link font-pacifico font-normal lg:text-base text-10 leading-3 lg:leading-5 text-white hover:text-coffee-100 duration-300 lg:py-8 inline-block"
+                >Testimonial</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- hero content -->
+      <div
+        class="grid lg:grid-cols-2 lg:gap-72 gap-8 justify-center items-center lg:py-16 py-12 max-w-[1070px] mx-auto px-6"
+      >
+        <div
+          class="order-last lg:order-first"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          <img src="/assets/home-coffee.png" class="w-full" alt="" />
+        </div>
+        <div class="lg:max-w-[447px] w-full">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            class="font-poppins font-medium text-15 lg:text-base leading-22 lg:leading-6 text-coffee-100 text-center lg:text-start"
+          >
+            EXCEPTIONAL QUALITY
+          </p>
+
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="50"
+            class="font-pacifico font-normal text-44 lg:text-7xl leading-52 lg:leading-86 text-white mt-3 md:mb-9 mb-4 text-center lg:text-start"
+          >
+            It's time for a good
+            <span class="inline-flex items-center ml-2">
+              coffee
+              <img
+                src="/assets/coffee-seed.png"
+                class="h-20 lg:h-auto"
+                alt=""
+              />
+            </span>
+          </h1>
+
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            data-aos-delay="100"
+            class="font-poppins font-normal text-15 md:text-base leading-22 md:leading-6 text-white text-center lg:text-start"
+          >
+            Each select coffee bean reflects our commitment to Peruvian coffee
+            growers, who bring the best select coffee to your table.
+          </p>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            data-aos-delay="150"
+            class="flex justify-center lg:justify-start"
+          >
+            <a
+              href="#"
+              class="font-poppins font-medium relative z-10 text-base leading-6 text-coffee-600 bg-coffee-100 py-4 px-6 rounded-full inline-flex items-center gap-2 mt-9 group before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 hover:text-black duration-1000"
+            >
+              Get Started
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="group-hover:translate-x-1 duration-300"
+              >
+                <path
+                  d="M13.172 12.1667L8.22198 7.21669L9.63598 5.80269L16 12.1667L9.63598 18.5307L8.22198 17.1167L13.172 12.1667Z"
+                  fill="#2E2624"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header End -->
+
+    <!-- Products Start -->
+    <section id="products" class="bg-coffee-700">
+      <div
+        class="bg-coffee-500 lg:rounded-t-[100px] rounded-t-[56px] lg:py-16 py-10"
+      >
+        <div
+          class="container grid lg:grid-cols-2 justify-center xl:items-center"
+        >
+          <div>
+            <div class="flex justify-center md:justify-start">
+              <a
+                href="#about"
+                class="font-poppins font-medium text-base leading-6 text-white bg-coffee-700 shadow-btn-shadow py-4 px-6 rounded-full inline-flex items-center gap-2 relative z-10 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-coffee-100 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 hover:text-coffee-700 duration-1000"
+              >
+                Scroll Down
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="group-hover:text-coffee-700"
+                >
+                  <path
+                    d="M12 13.172L16.95 8.22198L18.364 9.63598L12 16L5.636 9.63598L7.05 8.22198L12 13.172Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p
+              class="font-poppins font-normal text-15 md:text-base leading-22 text-center md:text-start md:leading-6 text-white max-w-[418px] mt-8"
+            >
+              We strive to form deep partnerships with farmers from all over the
+              world to create perspective together and form healthy working
+              relationships built on trust and respect.
+            </p>
+          </div>
+          <!-- products -->
+          <div
+            class="grid xl:grid-cols-3 grid-cols-2 md:gap-20 gap-14 mt-14 lg:mt-0"
+          >
+            <div>
+              <img src="/assets/product-coffee-1.png" class="w-full" alt="" />
+              <p
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white"
+              >
+                Classic Coffee
+              </p>
+              <span
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white block"
+                >$17.90</span
+              >
+            </div>
+            <div>
+              <img src="/assets/product-coffee-2.png" class="w-full" alt="" />
+              <p
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white"
+              >
+                Black Coffee
+              </p>
+              <span
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white block"
+                >$24.90</span
+              >
+            </div>
+            <div>
+              <img src="/assets/product-coffee-3.png" class="w-full" alt="" />
+              <p
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white"
+              >
+                Strong Coffee
+              </p>
+              <span
+                class="font-pacifico font-normal text-xl leading-6 text-center text-white block"
+                >$32.90</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products End -->
+
+    <!-- About Start -->
+    <section id="about" class="bg-coffee-500">
+      <div
+        class="bg-white lg:rounded-t-[100px] rounded-t-[56px] lg:py-16 py-10"
+      >
+        <div
+          class="container grid lg:grid-cols-2 lg:gap-24 gap-12 justify-center items-center"
+        >
+          <div class="order-last lg:order-first">
+            <img src="/assets/about-coffee.png" class="w-full" alt="" />
+          </div>
+          <!-- products -->
+          <div class=" ">
+            <h2
+              class="font-pacifico font-normal text-28 lg:text-5xl leading-8 lg:leading-58 mb-6 text-coffee-600 text-center lg:text-start"
+            >
+              Our History
+            </h2>
+            <p
+              class="font-poppins font-normal text-15 md:text-base leading-22 md:leading-6 text-coffee-400 text-center lg:text-start"
+            >
+              We make and grow the best coffee in Peru, accompanying families
+              since 1930, with professional workers who harvest, collect and
+              select the coffee with quality work, thus providing exquisite
+              coffee to enjoy together as a family.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Steps Start -->
+    <section id="steps" class="bg-white">
+      <div
+        class="bg-coffee-500 lg:rounded-t-[100px] rounded-t-[56px] lg:py-16 py-10 bg-coffee-beans bg-cover bg-no-repeat"
+      >
+        <div class="max-w-[1024px] mx-auto px-6">
+          <h2
+            class="font-pacifico font-normal text-28 lg:text-5xl leading-8 lg:leading-58 mb-6 text-white text-center"
+          >
+            Steps of manufacturing our products
+          </h2>
+          <div
+            class="grid md:grid-cols-3 grid-cols-1 lg:gap-24 gap-12 relative mt-20 h-auto"
+          >
+            <!-- connective line -->
+            <!-- Image for small screens -->
+            <div
+              class="absolute top-[30%] transform -translate-y-[30%] right-10 sm:hidden"
+            >
+              <img
+                src="/assets/Steps line dashed 3.svg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Image for medium and larger screens -->
+            <div
+              class="absolute bottom-[25%] left-1/2 transform -translate-x-1/2 w-full hidden md:flex justify-center items-center"
+            >
+              <img src="/assets/Steps line dashed-2.svg" alt="" />
+            </div>
+            <!-- step one -->
+            <div>
+              <div
+                class="bg-coffee-300 rounded-full lg:size-64 size-40 flex justify-center items-center relative"
+              >
+                <img src="/assets/steps-green-coffee.png" alt="" />
+                <div
+                  class="font-poppins font-semibold text-2xl lg:text-4xl leading-9 lg:leading-64 text-center lg:size-20 size-12 bg-coffee-100 text-coffee-500 rounded-full flex justify-center items-center absolute top-0 left-0 lg:border-[10px] border-[6px] border-coffee-500"
+                >
+                  01
+                </div>
+              </div>
+              <p
+                class="font-poppins font-normal text-base leading-6 text-white mt-8 max-w-[275px]"
+              >
+                Harvest occurs annually when the coffee beans reach maturity and
+                are collected for processing.
+              </p>
+            </div>
+            <!-- step two -->
+            <div
+              class="lg:mt-32 md:block flex flex-col-reverse gap-6 justify-end items-end"
+            >
+              <p
+                class="font-poppins font-normal text-base leading-6 text-white mb-8 text-end md:text-start max-w-[270px]"
+              >
+                The beans are dried using a wet or dry technique, depending on
+                the taste we want to obtain.
+              </p>
+              <div
+                class="bg-coffee-300 rounded-full lg:size-64 size-40 flex justify-center items-center relative"
+              >
+                <img src="/assets/steps-coffee-beans.png" alt="" />
+                <div
+                  class="font-poppins font-semibold text-2xl lg:text-4xl leading-9 lg:leading-64 text-center lg:size-20 size-12 bg-coffee-100 text-coffee-500 rounded-full flex justify-center items-center absolute top-0 left-0 lg:border-[10px] border-[6px] border-coffee-500"
+                >
+                  02
+                </div>
+              </div>
+            </div>
+            <!-- step three -->
+            <div>
+              <div
+                class="bg-coffee-300 rounded-full lg:size-64 size-40 flex justify-center items-center relative"
+              >
+                <img src="/assets/steps-ground-coffee-1.png" alt="" />
+                <div
+                  class="font-poppins font-semibold text-2xl lg:text-4xl leading-9 lg:leading-64 text-center lg:size-20 size-12 bg-coffee-100 text-coffee-500 rounded-full flex justify-center items-center absolute top-0 left-0 lg:border-[10px] border-[6px] border-coffee-500"
+                >
+                  03
+                </div>
+              </div>
+              <p
+                class="font-poppins font-normal text-base leading-6 text-white mt-8 max-w-[270px]"
+              >
+                Harvest occurs annually when the coffee beans reach maturity and
+                are collected for processing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Steps End -->
+
+    <!-- Testimonial Start -->
+    <section id="testimonial" class="bg-coffee-500">
+      <div
+        class="bg-white lg:rounded-t-[100px] rounded-t-[56px] lg:py-16 py-10"
+      >
+        <div
+          class="container grid lg:grid-cols-2 lg:gap-24 gap-12 justify-center items-center"
+        >
+          <!-- user review -->
+          <div>
+            <h2
+              class="font-pacifico font-normal text-28 lg:text-5xl leading-8 lg:leading-58 text-coffee-600 text-center lg:text-start"
+            >
+              Coffee is the best drink in the morning, it keeps you focused.
+            </h2>
+            <p
+              class="font-poppins font-medium text-base leading-6 text-coffee-400 lg:mt-12 mt-6 text-center lg:text-start"
+            >
+              Jhon Doe
+            </p>
+          </div>
+          <div>
+            <img src="/assets/testimonial-coffee.png" class="w-full" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div id="footer" class="bg-white">
+      <div
+        class="bg-coffee-500 lg:rounded-t-[100px] rounded-t-[56px] lg:py-16 py-10 bg-coffee-beans bg-cover bg-no-repeat"
+      >
+        <div class="container">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-72"
+          >
+            <div>
+              <a href="#home" class="flex justify-center lg:justify-start">
+                <img src="/assets/Header-logo.svg" alt=""
+              /></a>
+              <h2
+                class="font-pacifico font-normal text-28 lg:text-5xl leading-8 lg:leading-58 mt-6 text-white"
+              >
+                Sign up for our newsletter
+              </h2>
+            </div>
+            <div class="lg:max-w-[360px] w-full">
+              <form>
+                <input
+                  type="email"
+                  placeholder="Enter e-mail address"
+                  class="font-poppins font-medium text-base leading-6 text-coffee-200 w-full outline-none focus:border-coffee-100 border-2 border-coffee-200 px-5 py-6 rounded-full bg-transparent"
+                />
+                <button
+                  type="submit"
+                  class="relative z-10 font-poppins font-medium text-base leading-6 text-coffee-600 bg-coffee-100 py-5 w-full justify-center rounded-full inline-flex items-center gap-2 md:mt-6 mt-4 group before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 hover:text-black duration-1000"
+                >
+                  Get Started
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="group-hover:translate-x-1 duration-300"
+                  >
+                    <path
+                      d="M13.172 12.1667L8.22198 7.21669L9.63598 5.80269L16 12.1667L9.63598 18.5307L8.22198 17.1167L13.172 12.1667Z"
+                      fill="#2E2624"
+                    />
+                  </svg>
+                </button>
+              </form>
+              <p
+                class="font-poppins font-normal md:text-sm text-xs leading-4 md:leading-5 text-white md:mt-6 mt-4 text-center md:text-start"
+              >
+                We care about your data. Read our
+                <a href="#" class="text-coffee-100 hover:underline"
+                  >Privacy Policy</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- social icon -->
+          <div class="lg:mt-24 mt-72 flex flex-col justify-center items-center">
+            <div class="flex gap-12 mb-14">
+              <a
+                href="#"
+                class="relative z-10 group rounded-full p-2 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"
+                    class="fill-white group-hover:fill-coffee-300 duration-500"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="relative z-10 group rounded-full p-2 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z"
+                    class="fill-white group-hover:fill-coffee-300 duration-500"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="relative z-10 group rounded-full p-2 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
+                    class="fill-white group-hover:fill-coffee-300 duration-500"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p
+              class="font-poppins font-normal text-sm leading-5 text-coffee-200 text-center"
+            >
+              Copyright Bedimcode. All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
